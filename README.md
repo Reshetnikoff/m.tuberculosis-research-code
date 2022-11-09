@@ -22,6 +22,19 @@ Specify input_dir and output_dir variables inside code script within configurati
 
 ### ABESS
 
+Use this scripts in abess folder to run ABESS for each drug and each fold:
+
+	Rscript run_abess.R {drug} {fold}
+
+(Specify input_dir and output_dir variables inside code script within configuration part)
+
+After that apply logistic regression on non-zeros selected features within abess folder:
+
+	python abess_lr.py
+
+(Specify dat_dir, result_dir and outptu_dir variables inside code script within configuration part to run these scripts)
+
+And finally run jupyter notebook -- ABESS analysis -- to make Table5, TableS11, TableS17. Change data_dir, data_dir_pre, output_abess_lr, final_output_abess if it's needed
 
 ## Population structure
 

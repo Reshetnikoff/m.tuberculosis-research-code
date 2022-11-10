@@ -5,7 +5,8 @@
 
 # Directory with HHS format files
 input_dir=../db/hhs_files
-# Output directory
+# Output directory (create three dir: {output_dir}/1, {output_dir}/3, {output_dir}/5
+# before start)
 output_dir=./output_hhs
 # Hyperparameter - minimum frequency of mutations that lead to the resistance phenotype
 filter=5

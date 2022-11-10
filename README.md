@@ -47,7 +47,7 @@ After that, make run_multi_hhs.sh executive and run three time with different mi
 
     ./run_multi_hhs.sh
     
-Apply logstic regression on selected HHS features by:
+Apply logstic regression on selected HHS features with different f (1, 3, 5) by:
 
     python hhs_lr.py
     

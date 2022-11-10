@@ -53,17 +53,28 @@ Apply logstic regression on selected HHS features with different f (1, 3, 5) by:
     
 Finally, run jupyter notebook -- HHS analysis.ipynb -- to make TableS12, TableS18 (and some preparation for Table3)
 
-All code is inside ./hhs folder.
+All code is the ./hhs folder.
 
 ### Logistic regression with L1, SCAD regularization (pycasso package)
 
 Codes for the part are in the ./lr folder.
 
-First of all, run below code with l1, scad and regulization ({method} = 'scad', 'mcp', 'l1') and gamma parameter (for scad and mcp {gamma} = 3, 5, 10, 15, and for l1 leave it empty):
+First of all, run the below code with l1, scad and regulization ({method} = 'scad', 'mcp', 'l1') and gamma parameter (for scad and mcp {gamma} = 3, 5, 10, 15, and for l1 leave it empty):
 
     python py_picasso.py {drug} {method} {gamma}
     
 And to make TableS13-15, TableS19-21 (and some preparation for Table3) run 'Pycasso analysis.ipynb'
+
+
+### Logistic regression with elastic net regularization
+
+Codes for the part are in the ./elastic_net folder.
+
+Execute the below code with parameter a that equal 0.25, 0.5 and 0.75:
+
+    python elastic_net.py {drug}
+    
+After that run jupyter notebook - Elastic net analysis.ipynb - to create TableS16, TableS22 (and some preparation for Table3)
 
 ## Population structure
 

@@ -36,6 +36,25 @@ After that apply logistic regression on non-zeros selected features within abess
 
 And finally run jupyter notebook -- ABESS analysis -- to make Table5, TableS11, TableS17. Change data_dir, data_dir_pre, output_abess_lr, final_output_abess if it's needed
 
+### HHS
+
+ Before running HHS, it's needed to convert matrix to HHS format and make distance hamming files:
+
+    python hamming.py {drug}
+    python convert_to_hhs.py {drug}
+
+After that, make run_multi_hhs.sh executive and run three time with different minimum frequency of mutations that lead to the resistance phenotype (f = 1, f = 3 and f = 5). Change it within configuration part within the file:
+
+    ./run_multi_hhs.sh
+    
+Apply logstic regression on selected HHS features by:
+
+    python hhs_lr.py
+    
+Finally, run jupyter notebook -- HHS analysis.ipynb -- to make TableS12, TableS18 
+
+All code is inside ./hhs folder
+
 ## Population structure
 
 ### Making matrix with TreeBreaker features

@@ -6,7 +6,7 @@ import os
 from joblib import Parallel, delayed
 
 #path to drug phenotypes
-path_to_pheno = ''
+path_to_pheno = '../db/pheno/'
 
 def make_files_for_drug(drug, outfolder, data_folder, domain_folder, threshold):
     os.makedirs(outfolder + drug, exist_ok=True)
@@ -85,13 +85,13 @@ if __name__ == "__main__":
              'Ciprofloxacin', 'Moxifloxacin', 'Ofloxacin', 'Pyrazinamide', 
              'Rifampicin', 'Amikacin', 'Streptomycin', 'Prothionamide', 
              'Ethionamide']
-    #folder for output
-    outfolder = ''
     #folder with domain features, should contain separate folders for each fold
     domain_folder = ''
-    os.makedirs(outfolder, exist_ok=True)
     #folder with annotations
     data_folder = ''
     #mutation frequency threshold
-    threshold = 3
+    threshold = int(sys.argv[1])
+    #folder for output
+    outfolder = f'matrices_for_abess_threshold_{threshold}/'
+    os.makedirs(outfolder, exist_ok=True)
     tasks = Parallel(n_jobs=13)(delayed(make_files_for_drug)(drug, outfolder, data_folder, domain_folder, threshold) for drug in drugs)

@@ -108,6 +108,10 @@ After that run jupyter notebook - Elastic net analysis.ipynb - to create TableS1
 
 To generate Table 3 (The comparison of abilities of the feature selection methods to catch up features for the genes associated with known mechanisms of drug resistance) run jupyter notebook -- './Feature metrics (Table 3).ipynb'
 
+### Supplement feature metrics
+
+To generate Table S24 (The comparison of stability of feature selection by different method) run jupyter notebook -- './Supplement feature metrics (Table S24).ipynb'
+
 ## Population structure
 
 ### Making matrix with TreeBreaker features

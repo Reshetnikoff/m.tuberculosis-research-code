@@ -7,7 +7,7 @@ Research code from article 'Feature selection and aggregation for antibiotic res
 
 
 
-## Data preprocessing
+## Data Preprocessing
 
 ### Matrix deduplication
 
@@ -110,6 +110,6 @@ Inside population_structure folder there are script to make matrix with TreeBrea
 
 	python make_db_with_str_features.py {drug}
 
-Specify input_dir, output_dir, split_dir, feature_dir and pheno_dir variables inside code script within configuration part to run these scripts
+After getting matrix, deduplicate them using instruction Data Preprocessing / Matrix deduplication and use script for selecting features by ABESS using instruction - Features Selection/ABESS. Specify input and output folders for all scripts!
 
 

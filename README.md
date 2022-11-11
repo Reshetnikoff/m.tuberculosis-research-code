@@ -18,6 +18,32 @@ Before usage matrix gotten in the previous step it's needed to deduplicate featu
 
 Specify input_dir and output_dir variables inside code script within configuration part to run these scripts
 
+## Test Aggregated Features
+
+Codes for the part are in the ./aggregated_features folder.
+
+First of all, it's needed using logistic regression to get metrics for Indels & SNPs datasets by:
+
+    python lr_snp_indel.py {drug}
+    
+For Indels & SNPs & aggregated by gene features datasets by:
+
+    python lr_snp_indel_aggr.py {drug}
+    
+For Indels & SNPs & broken gene features datasets by:
+
+    python lr_snp_broken.py {drug}
+    
+For Indels & SNPs & aggregated by PFAM features datasets by:
+
+    python lr_snp_indel_pfam.py {drug}
+    
+For Indels & SNPs & without exculding mutations datasets by:
+
+    python lr_snp_indel_thr1.py {drug}
+    
+And after executing all these scripts, run jupyter notebook 'Feature sets analysis.ipynb' to get TableS2-S10 (tables with comparation feature sets and dispersions for the sets)
+
 ## Feature Selection
 
 ### ABESS

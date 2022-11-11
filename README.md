@@ -5,7 +5,9 @@ Research code from article 'Feature selection and aggregation for antibiotic res
 
 
 
+## Phenotype Heatmap
 
+To get phenotype heatmap figure (Fig1) run jupyter notebook ./Pheno heatmap (Figure 1).ipynb
 
 ## Data Preprocessing
 
@@ -101,6 +103,10 @@ Execute the below code with parameter a that equal 0.25, 0.5 and 0.75:
     python elastic_net.py {drug}
     
 After that run jupyter notebook - Elastic net analysis.ipynb - to create TableS16, TableS22 (and some preparation for Table3)
+
+### Feature metrics 
+
+To generate Table 3 (The comparison of abilities of the feature selection methods to catch up features for the genes associated with known mechanisms of drug resistance) run jupyter notebook -- './Feature metrics (Table 3).ipynb'
 
 ## Population structure
 

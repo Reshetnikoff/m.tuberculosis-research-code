@@ -118,6 +118,9 @@ To generate Table S24 (The comparison of stability of feature selection by diffe
 
 To get quality evaluation of directr assocation based on WHO catalogue, run jupyter notebook './who_pred/who analysis.ipynb'. As a result of the work, intermediate files and TableS23 will appear
 
+### Figure 3 
+
+Figure with average ROC-AUC score of logistic regression models trained on features majorly selected by different methods and direct association based on WHO catalogue is made by running jupyter notebook './Quality metrics figure (Fig 3).ipynb'
 
 ## Population structure
 

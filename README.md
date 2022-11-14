@@ -112,6 +112,13 @@ To generate Table 3 (The comparison of abilities of the feature selection method
 
 To generate Table S24 (The comparison of stability of feature selection by different method) run jupyter notebook -- './Supplement feature metrics (Table S24).ipynb'
 
+## Quality prediction 
+
+### Direct association based on WHO catalogue
+
+To get quality evaluation of directr assocation based on WHO catalogue, run jupyter notebook './who_pred/who analysis.ipynb'. As a result of the work, intermediate files and TableS23 will appear
+
+
 ## Population structure
 
 ### Making matrix with TreeBreaker features

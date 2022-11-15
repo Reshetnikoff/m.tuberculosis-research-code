@@ -112,6 +112,24 @@ To generate Table 3 (The comparison of abilities of the feature selection method
 
 To generate Table S24 (The comparison of stability of feature selection by different method) run jupyter notebook -- './Supplement feature metrics (Table S24).ipynb'
 
+### Iterative ABESS
+
+Codes for the part are in the ./abess folder.
+
+This part give an instruction to use scripts to make matrices for next iteration of ABESS. First of all, it's needed to run converter for all drug:
+
+    python converter.py {drug}
+    
+After that, run make_db_next_abess_iter.py to make matrices for next iteration. The script remove explained resistance samples by logistic regression  trained on majorly selected features from previous iteration and remove random susceptible samples to preserve the balance of classes:
+
+    python make_db_next_abess_iter.py {drug}
+
+Next, it's needed to deduplicate gotten matries (see Data Preprocessing / Matrix deduplication). Change input_dir to '../db/cv_bess_files_iter_2' and output_dir to ../db/cv_bess_files.2_iter_2 within fix_duplicates.py and fix_test_duplicates.py. And the matrices is participated in the ABESS prediction (see Feature selection / ABESS). Change input_dir to ../db/cv_bess_files.2_iter_2 and output_dir to './output_abess' (create this directory!) within configuration part of run_abess.R script. Also change data_dir to '../db/cv_bess_files.2_iter_2', result_dir to './output_abess_iter_2' and output_dir to './output_abess_lr'. Run the scripts according to the below instruction.
+
+And repeat running converter.py and make_db_next_abess_iter.py. Specify configuration parts variables.
+
+Lastly, execute jupyter notebook 'Iterative abess analysis.ipynb'
+
 ## Quality prediction 
 
 ### Direct association based on WHO catalogue

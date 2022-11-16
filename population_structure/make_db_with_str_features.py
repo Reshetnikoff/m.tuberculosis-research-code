@@ -9,7 +9,7 @@ split_dir = ''
 # Output directory
 output_dir = ''
 # Output of TreeBreaker features script
-feature_dir = ''
+feature_dir = './tree_features/'
 # Diretory with pheno
 pheno_dir = '../db/pheno'
 

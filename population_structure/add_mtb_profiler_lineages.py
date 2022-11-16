@@ -1,3 +1,7 @@
+#
+# These functions add MTBprofiler lineages to TreeBreaker features and compute corresponding p-values.
+#
+
 from multiprocessing import Pool
 from os import listdir, makedirs
 from Bio import SeqIO

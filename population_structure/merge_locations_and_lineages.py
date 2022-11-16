@@ -1,3 +1,9 @@
+#
+# These functions add location inforation to TreeBreaker features and compute corresponding p-values.
+# Finally, location and lineage information is intergated into final tables.
+#
+
+
 from multiprocessing import Pool
 from os import listdir, makedirs
 from random import shuffle

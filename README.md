@@ -11,6 +11,8 @@ To get phenotype heatmap figure (Fig1) run jupyter notebook ./Pheno heatmap (Fig
 
 ## Data Preprocessing
 
+Before running the scripts, please, extract all archives in the db subdirectory.
+
 ### Matrix deduplication
 
 Before usage matrix gotten in the previous step it's needed to deduplicate feature by follow scripts in the data_preprocessing directory:
@@ -161,7 +163,10 @@ Figure with average ROC-AUC score of logistic regression models trained on featu
 ### Making matrix with TreeBreaker features
 
 Inside population_structure folder there are script to make matrix with TreeBreaker features to next usage ABESS feature selection:
-
+	
+	python generate_treeBreaker_features.py
+	python add_mtb_profiler_lineages.py
+	python merge_locations_and_lineages.py
 	python make_db_with_str_features.py {drug}
 
 After getting matrix, deduplicate them using instruction Data Preprocessing / Matrix deduplication and use script for selecting features by ABESS using instruction - Features Selection/ABESS. Specify input and output folders for all scripts!

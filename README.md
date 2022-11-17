@@ -13,6 +13,24 @@ To get phenotype heatmap figure (Fig1) run jupyter notebook ./Pheno heatmap (Fig
 
 Before running the scripts, please, extract all archives in the db subdirectory.
 
+### Matrix preparation
+
+It's needed to generate three directory with various data. But first of all, using annotation codes from https://github.com/dashabykova/MTB_project run variant calling (annotation.py). Specify input variables. Also get domain features via https://github.com/Reshetnikoff/HMM_prediction 
+
+1. Use bess files_prepare.py to get data matrices (bess_files and bess_files_thr1) with threshold 3 and 1 without split to parts and without domain features with specified data_folder (output of annotation.py):
+
+    python3 bess_files_prepare.py {drug} {threshold}
+
+2. Run bess_files_prepare_to_fold. You need to define paths to folder with domain features for each fold (output of HMM_prediction's domain_feature_generation_folds.py) and folder with annotations (output of MTB_project's annotation.py)
+
+    python3 bess_files_prepare_folds.py {threshold}
+    
+3. Make split data for 'Test Aggregated Features' part:
+
+    python3 make_stratified_splits_for_drug.py {drug}
+    
+4. Using 100 splits from previous step prepare domain features (HMM_prediction repository) for each data split and each drug
+
 ### Matrix deduplication
 
 Before usage matrix gotten in the previous step it's needed to deduplicate feature by follow scripts in the data_preprocessing directory:

@@ -1,4 +1,4 @@
-import sys
+import os, sys
 import pandas as pd
 import numpy as np
 from os.path import exists
@@ -9,13 +9,20 @@ path_to_pheno = '../db/pheno/'
 if __name__ == "__main__":
     drug = sys.argv[1]
     #mutation (feature) frequency threshold
-    threshold = sys.argv[2]
+    threshold = int(sys.argv[2])
     #path to annotations
-    data_folder = ''
+    data_folder = '../db/annotated_data'
     #if we should include domains
     domains = False
     path_to_domains = ''
-    outfolder = f'abess_matrix_general_{drug}_thr_{threshold}_domains_{domains}/'
+    if threshold == 3:
+        outfolder = f'../db/bess_files/'
+    else:
+        outfolder = f'../db/bess_files_thr{threshold}/'
+    
+    if not os.path.exists(outfolder):
+        os.mkdir(outfolder)
+
     mutations_dict = {}
     org_mut = {}
     total_count = 0

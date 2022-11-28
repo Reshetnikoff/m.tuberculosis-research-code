@@ -10,8 +10,7 @@ phenofolder='../db/pheno/'
 
 def stratified_split(my_drug, outfolder, num):
     skf = StratifiedKFold(n_splits=5, shuffle=True)
-    os.makedirs(outfolder + my_drug + '/' + str(num), exist_ok=True)
-    logfile_pattern = outfolder + my_drug + '/splits/' + my_drug + '.' + str(num) + '.'
+    logfile_pattern = outfolder + '/splits/' + my_drug + '/' + my_drug  + '.' + str(num) + '.'
     print(logfile_pattern[:-1])
     c = 1
     for train_index, test_index in skf.split(X, y):
@@ -30,8 +29,8 @@ def stratified_split(my_drug, outfolder, num):
 
 if __name__ == "__main__":
     my_drug = sys.argv[1]
-    outfolder = sys.argv[2]
-    os.makedirs(outfolder + my_drug + '/splits', exist_ok=True)
+    outfolder = '../db'
+    os.makedirs(outfolder + '/splits/' + my_drug, exist_ok=True)
     X, y = [], []
     with open(phenofolder + my_drug + '.pheno') as f:
         for line in f:

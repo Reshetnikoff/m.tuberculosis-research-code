@@ -15,13 +15,13 @@ Before running the scripts, please, extract all archives in the db subdirectory.
 
 ### Matrix preparation
 
-It's needed to generate three directory with various data. But first of all, using annotation codes from https://github.com/dashabykova/MTB_project run variant calling (annotation.py). Specify input variables. Also get domain features via https://github.com/Reshetnikoff/HMM_prediction 
+It's needed to generate three directory with various data. But first of all, using annotation codes from https://github.com/dashabykova/MTB_project run variant calling (annotation.py) with input dir ../db/nucl_data for each durg. Specify input variables. Place it in ../db/annotated_data. Also get domain features via https://github.com/Reshetnikoff/HMM_prediction and put output domain_feature_generation_folds.py to ../db/domain_data
 
 1. Use bess files_prepare.py to get data matrices (bess_files and bess_files_thr1) with threshold 3 and 1 without split to parts and without domain features with specified data_folder (output of annotation.py):
 
     python3 bess_files_prepare.py {drug} {threshold}
 
-2. Run bess_files_prepare_to_fold. You need to define paths to folder with domain features for each fold (output of HMM_prediction's domain_feature_generation_folds.py) and folder with annotations (output of MTB_project's annotation.py)
+2. Run bess_files_prepare_to_fold:
 
     python3 bess_files_prepare_folds.py {threshold}
     

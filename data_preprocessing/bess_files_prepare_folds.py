@@ -86,12 +86,12 @@ if __name__ == "__main__":
              'Rifampicin', 'Amikacin', 'Streptomycin', 'Prothionamide', 
              'Ethionamide']
     #folder with domain features, should contain separate folders for each fold
-    domain_folder = ''
+    domain_folder = '../db/domain_data'
     #folder with annotations
-    data_folder = ''
+    data_folder = '../db/annotated_data'
     #mutation frequency threshold
     threshold = int(sys.argv[1])
     #folder for output
-    outfolder = f'matrices_for_abess_threshold_{threshold}/'
+    outfolder = f'../db/cv_bess_files/'
     os.makedirs(outfolder, exist_ok=True)
     tasks = Parallel(n_jobs=13)(delayed(make_files_for_drug)(drug, outfolder, data_folder, domain_folder, threshold) for drug in drugs)

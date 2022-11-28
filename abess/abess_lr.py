@@ -3,7 +3,7 @@
 # Configutation part #
 
 # Directory with matrix after deduplication
-data_dir = ""
+data_dir = "../db/cv_bess_files.2"
 # Directory with output of ABESS algorithm (output of run_abess.R)
 result_dir = "./output_abess"
 # Output directory: {output_dir}/{exp_name}. Leave exp_name variable is unchanged 

@@ -6,9 +6,9 @@
 # Configutation part #
 
 # Directory with matrix before deduplication
-data_dir_pre = ""
+data_dir_pre = "../db/cv_bess_files"
 # Directory with matrix after deduplication
-data_dir = ""
+data_dir = "../db/cv_bess_files"
 # Output of hhs_lr.py
 output_hhs = "./output_hhs_lr_iter_2"
 # Output directory to save next iteration matrices

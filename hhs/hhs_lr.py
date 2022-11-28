@@ -3,9 +3,9 @@
 # Configutation part #
 
 # Directory with matrix after deduplication
-hhs_files_dir = ""
+hhs_files_dir = "../db/cv_bess_files.2"
 # Directory with matrix before deduplication
-hhs_files_dir_bef_dedup = ""
+hhs_files_dir_bef_dedup = "../db/cv_bess_files"
 # Directory with output run_multi_hhs.sh script
 input_dir = f"./output_hhs"
 # Output directory

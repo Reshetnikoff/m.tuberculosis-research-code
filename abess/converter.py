@@ -3,9 +3,9 @@
 # Configutation part #
 
 # Directory with matrix before deduplication
-data_dir_pre = ""
+data_dir_pre = "../db/cv_bess_files"
 # Directory with matrix after deduplication
-data_dir = ""
+data_dir = "../db/cv_bess_files.2"
 # Output of abess_lr.py
 input_dir = "./output_abess"
 # Output of this script

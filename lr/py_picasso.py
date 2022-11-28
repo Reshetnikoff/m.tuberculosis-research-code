@@ -3,7 +3,7 @@
 # Configutation part #
 
 # Directory with matrix after deduplication
-cv_bess_dir = ""
+cv_bess_dir = "../db/cv_bess_files.2"
 # Output directory
 output_dir = f'./output_picasso'
 

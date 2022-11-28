@@ -3,9 +3,9 @@
 # Configutation part #
 
 # Input folder with matrices and feature's info
-input_dir = ""
+input_dir = "../db/cv_bess_files"
 # Output folder (the same as in fix_duplicates.py)
-output_dir = ""
+output_dir = "../db/cv_bess_files.2"
 
 ######################
 

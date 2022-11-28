@@ -3,11 +3,11 @@
 # Configutation part #
 
 # Directory with matrix files
-data_dir = ''
+data_dir = "../db/cv_bess_files"
 # Directory with split info
-split_dir = ''
+split_dir = "../db/splits"
 # Output directory
-output_dir = ''
+output_dir = '../db/cv_str_files'
 # Output of TreeBreaker features script
 feature_dir = './tree_features/'
 # Diretory with pheno

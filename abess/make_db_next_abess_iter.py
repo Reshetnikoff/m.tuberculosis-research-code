@@ -6,13 +6,13 @@
 # Configutation part #
 
 # Directory with matrix before deduplication
-data_dir_pre = ""
+data_dir_pre = "../db/cv_bess_files"
 # Directory with matrix after deduplication
-data_dir = "2"
+data_dir = "../db/cv_bess_files.2"
 # Output of converter.py
 selection_dir = "./output_abess"
 # Output directory to save next iteration matrices
-output_dir = '../db/cv_files_iter_2'
+output_dir = '../db/cv_bess_files_iter_2'
 # Directory with stored informations about number of explained samples
 result_dir = "./output_iterative_abess/explained_iter_1"
 

@@ -4,7 +4,7 @@
 # Configutation part #
 
 # Directory with HHS format files
-input_dir=../db/hhs_files
+input_dir=../db/cv_bess_files
 # Output directory (create three dir: {output_dir}/1, {output_dir}/3, {output_dir}/5
 # before start)
 output_dir=./output_hhs

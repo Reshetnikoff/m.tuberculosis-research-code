@@ -3,7 +3,7 @@
 # Configutation part #
 
 # Directory with matrix after deduplication
-input_dir = ""
+input_dir = "../db/cv_bess_files.2"
 # Output directory
 output_dir = "../db/hhs_files"
 

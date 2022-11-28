@@ -3,9 +3,9 @@
 # Configutation part #
 
 # Input matrix folder after deduplication
-input_dir = ""
-# Output folder (make this directory)
-output_dir = ""
+input_dir = "../db/cv_bess_files"
+# Output folder (make this directory!)
+output_dir = "./output_abess"
 
 ######################
 

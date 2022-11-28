@@ -4,9 +4,9 @@
 # Configuration part #
 
 # Directory with matrix without dataset split and without PFAM domain features
-bess_dir = ""
+bess_dir = "../db/bess_files"
 # Directory with information about data splits
-split_dir = f"./db/splits"
+split_dir = f"../db/splits"
 # Output directory
 output_dir = f"./output/snp_indel"
 

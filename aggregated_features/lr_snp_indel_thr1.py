@@ -5,9 +5,9 @@
 
 # Directory with matrix without dataset split, without PFAM domain features 
 # and without excluding rare mutations
-bess_dir = "
+bess_dir = "../db/bess_files_thr1"
 # Directory with information about data splits
-split_dir = f"./db/splits"
+split_dir = f"../db/splits"
 # Output directory
 output_dir = f"./output/snp_indel"
 

@@ -3,9 +3,9 @@
 # Configutation part #
 
 # Directory with matrix after deduplication
-input_dir = ""
+input_dir = "../db/cv_bess_files.2"
 # Output directory with HHS format files
-output_dir = "../db/hhs_files"
+output_dir = "../db/db/hhs_files"
 
 ######################
 

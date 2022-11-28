@@ -7,9 +7,9 @@ pheno_dir = "../db/pheno"
 # Directory with information about data splits
 split_dir = f"./db/splits"
 # Directory with domain data
-root_domain_dir = ""
+root_domain_dir = "./db/domain_files_100"
 # Output directory
-output_dir = f"./domain_files_070222"
+output_dir = f"./transformed_domain_files"
 # List of {gene}_{domain}
 pfam_features_file=  "../db/PfamFeatures.csv"
 

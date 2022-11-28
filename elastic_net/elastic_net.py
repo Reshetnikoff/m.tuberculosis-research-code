@@ -2,9 +2,9 @@
 # Configutation part #
 
 # Directory with matrix after deduplication
-data_dir = ""
+data_dir = "../db/cv_bess_files.2"
 # Directory with matrix before deduplication
-data_dir_pre = ""
+data_dir_pre = "../db/cv_bess_files"
 # Output directory
 output_dir = f'./output_elastic_net'
 # Gamma parameter (parameter l1_ration in the sklearn logistic regression)

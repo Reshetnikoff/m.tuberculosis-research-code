@@ -15,7 +15,7 @@ Before running the scripts, please, extract all archives in the db subdirectory.
 
 ### Matrix preparation
 
-It's needed to generate three directory with various data. But first of all, using annotation codes from https://github.com/dashabykova/MTB_project run variant calling (annotation.py) with input dir ../db/nucl_data for each durg. Specify input variables. Place it in ../db/annotated_data. Also get domain features via https://github.com/Reshetnikoff/HMM_prediction and put output domain_feature_generation_folds.py to ../db/domain_data
+It's needed to generate three directory with various data. But first of all, using annotation codes from https://github.com/dashabykova/MTB_project run variant calling (annotation.py) with input dir ./db/nucl_data for each durg. Specify input variables. Place it in ./db/annotated_data. Also get domain features via https://github.com/Reshetnikoff/HMM_prediction and put output domain_feature_generation_folds.py to ./db/domain_data
 
 1. Use bess files_prepare.py to get data matrices (bess_files and bess_files_thr1) with threshold 3 and 1 without split to parts and without domain features with specified data_folder (output of annotation.py):
 
@@ -28,8 +28,6 @@ It's needed to generate three directory with various data. But first of all, usi
 3. Make split data for 'Test Aggregated Features' part:
 
     python3 make_stratified_splits_for_drug.py {drug}
-    
-4. Using 100 splits from previous step prepare domain features (HMM_prediction repository) for each data split and each drug
 
 ### Matrix deduplication
 
@@ -56,14 +54,14 @@ For Indels & SNPs & broken gene features datasets by:
 
     python lr_snp_broken.py {drug}
     
-For Indels & SNPs & aggregated by PFAM features datasets by:
-
-    python lr_snp_indel_pfam.py {drug}
-    
 For Indels & SNPs & without exculding mutations datasets by:
 
     python lr_snp_indel_thr1.py {drug}
     
+Before start the code for Indels & SNPs & aggregated by PFAM use code from HMM_prediction repository and splits from Data Preparation prepare 100 five-folds domains. Transform the domain with transform_domain.py. Put output folder to ./db/domain_data_100. Run:
+
+    python  lr_snp_indel_pfam.py
+
 And after executing all these scripts, run jupyter notebook 'Feature sets analysis.ipynb' to get TableS2-S10 (tables with comparation feature sets and dispersions for the sets)
 
 ## Feature Selection
@@ -74,13 +72,9 @@ Use this scripts in abess folder to run ABESS for each drug and each fold:
 
 	Rscript run_abess.R {drug} {fold}
 
-(Specify input_dir and output_dir variables inside code script within configuration part)
-
 After that apply logistic regression on non-zeros selected features within abess folder:
 
 	python abess_lr.py
-
-(Specify dat_dir, result_dir and outptu_dir variables inside code script within configuration part to run these scripts)
 
 And finally run jupyter notebook -- ABESS analysis -- to make Table5, TableS11, TableS17 (and some preparation for Table3). Change data_dir, data_dir_pre, output_abess_lr, final_output_abess if it's needed
 
